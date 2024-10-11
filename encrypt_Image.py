@@ -10,8 +10,8 @@ def create_blue_gradient(width, height):
             img.putpixel((x, y), (0, 0, blue_value))  # Blue gradient
     return img
 
-# Function to draw a circle with a gradient (Optional use)
-def create_circle_with_gradient(img, center, radius):
+# Function to draw a circle with a gradient (Optional use) 
+def create_circle_with_gradient(img, center, radius): 
     draw = ImageDraw.Draw(img)
     for r in range(radius, 0, -1):
         color_value = int(255 * (r / radius))
