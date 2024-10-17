@@ -41,7 +41,7 @@ def decrypt_image(encrypted_image):
 # Main logic for encryption and decryption
 def process_image():
     # Get image path from user
-    image_path = input("Enter the full path to the image: ")
+    image_path = input("Enter the full path to the image: ")        
     
     # Check if the file exists
     if not os.path.exists(image_path):
