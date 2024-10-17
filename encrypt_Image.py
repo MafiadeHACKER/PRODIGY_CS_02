@@ -5,7 +5,7 @@ import os
 # 1. Load the image
 def load_image(image_path):
     try:
-        return Image.open(image_path)
+        return Image.open(image_path)           
     except FileNotFoundError:
         print("File not found. Please check the path and try again.")
         return None
