@@ -1,49 +1,52 @@
 # PRODIGY_CS_02
 
-# Simple Image Encryption Tool
-This Python script allows users to encrypt and decrypt images using pixel manipulation. The script enables users to choose an image file, input an encryption key, and decide whether to encrypt or decrypt the image.
+# Image Encryption Tool - Pixel Manipulation
+
+# Description
+This Python program is a simple image encryption tool that allows users to encrypt and decrypt images using pixel manipulation techniques. It performs operations such as swapping pixel values (e.g., red and blue channels) or applying a basic mathematical operation (e.g., adding a constant value) to encrypt the image. The program also provides the ability to reverse these operations to decrypt the image back to its original form.
 
 # Features
-Encrypt Image: Add a key value to each pixel of the image for encryption.
-Decrypt Image: Subtract the key value from each pixel to restore the original image.
-User Interaction: Input-based system where users provide the image file path and choose the operation (encryption or decryption).
+# Image Encryption:
+Swaps the red and blue color channels of the image.
+Optionally applies a mathematical shift to the pixel values.
+# Image Decryption:
+Reverses the encryption by swapping the channels back or reversing the shift.
 
 # Requirements
 Python 3.x
-Pillow library (for image manipulation)
-NumPy library (for pixel-level operations)
+Pillow (PIL)
+You can install Pillow using pip:
+    pip install pillow
 
-# Installation
-Install Python: Make sure you have Python 3 installed on your system. If not, you can download it from python.org.
-
-Install Dependencies: Install the required libraries using pip:
-    pip install pillow numpy
+NumPy
+You can install NumPy using pip:
+    pip install numpy
 
 # Usage
-Run the Script: Execute the script in a terminal or Python IDE:
-    python image_encryption.py
+Clone or download this repository.
+Ensure you have an image file ready for encryption.
+Run the script and provide the image path when prompted.
 
-# Input Prompts:
-The script will ask you to provide the path to the image file (e.g., image.png).
-Choose whether to "encrypt" or "decrypt" the image by typing encrypt or decrypt.
-Input a number between 0 and 255 as the encryption key.
+# Steps:
+The program will load the image from the provided path.
+The image will then be encrypted and saved as encrypted_image.png.
+After encryption, the image will be decrypted and saved as decrypted_image.png.
 
-# Output:
-The original image will be displayed.
-After processing, either the encrypted or decrypted image will be shown.
-The processed image will be saved in the same directory with the names:
-    encrypted_image.png for encrypted images.
-    decrypted_image.png for decrypted images.
+# Example:
+python image_encryption.py
+When prompted:
+Enter the path to the image file: /path/to/image.jpg
 
-# Example
-Enter the path to the image file (e.g., 'image.png'): image.png
-Do you want to encrypt or decrypt the image? (Enter 'encrypt' or 'decrypt'): encrypt
-Enter an encryption key (a number between 0 and 255): 50
+# How It Works
+Load the Image:
+The image is loaded from the user-specified path using the PIL library.
+Encrypt the Image:
+The red and blue color channels of the image are swapped.
+Alternatively, a mathematical operation (e.g., adding 50 to each pixel value) is applied to encrypt the image.
+Decrypt the Image:
+The swapping of color channels is reversed.
+The mathematical shift applied during encryption is subtracted to recover the original image.
 
-After completing the encryption or decryption, the resulting image will be saved in the working directory, and a message will confirm the operation.
-
-# Error Handling
-File Not Found: If the provided image path is incorrect, you will get an error message.
-Invalid Key: Ensure the encryption key is a number between 0 and 255. Otherwise, a warning will be shown.
-Optional (Blue Gradient and Circle with Gradient)
-The script contains optional functions to create a blue gradient background and draw a circle with a gradient on an image. These functions can be used if needed but are not critical for the encryption and decryption processes.
+# Output
+encrypted_image.png: The encrypted version of the input image.
+decrypted_image.png: The decrypted image, restored to its original form.
